@@ -1,0 +1,26 @@
+{
+  "name": "@aira/database",
+  "version": "1.5.0",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "db:generate": "prisma generate",
+    "db:migrate": "prisma migrate dev",
+    "db:seed": "npx tsx src/seed.ts",
+    "db:studio": "prisma studio",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.1.0",
+    "@aira/types": "workspace:*",
+    "@aira/logger": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "prisma": "^6.1.0",
+    "typescript": "^5.7.0",
+    "tsx": "^4.19.0"
+  }
+}
